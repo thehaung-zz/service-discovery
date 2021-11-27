@@ -8,5 +8,5 @@ RUN mvn package
 # Integration
 FROM openjdk:8-jre-alpine
 WORKDIR /app
-COPY --from=builder /build/target/app.jar /app/
+COPY --from=builder /build/target/*.jar app.jar
 ENTRYPOINT ["java", "-jar", "app.jar"]
