@@ -1,4 +1,2 @@
-docker build -t service-discovery .
-docker stop service-discovery
-docker rm service-discovery
-docker run -d --restart=always -p 8761:8761 --name service-discovery -t service-discovery
+docker build -t registry.gitlab.com/3hvn/service-discovery .
+docker push registry.gitlab.com/3hvn/service-discovery
